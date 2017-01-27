@@ -164,7 +164,9 @@
 			height: 20px;
 			right: 0;
 			bottom: 100px;
-			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+			font-size: 16px;
 		}
 	</style>
 </head>
@@ -272,7 +274,6 @@
 	</div>
 	<audio id="music" loop="loop" src="audio/纯音乐 - 非常轻快温馨的曲子.mp3"></audio>
 	<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
-
 	<script>
 		$('#music')[0].play();
 		$('.xuyuan-text').on('click',function(){
@@ -473,6 +474,16 @@
 					addYinfu();
 					changeBig();
 					changeSmall();
+					setTimeout(function(){
+						$('.tishi').css({
+							'width':200+"px"
+						})
+					},2000);
+					setTimeout(function(){
+						$('.tishi').css({
+							'width':0+"px"
+						})
+					},12000);
 				}
 			};
 		};
@@ -499,12 +510,8 @@
 			$('#ul li').on('mousedown',function(){
 				var index = $(this).index();
 				if(index==19){
-
-					setTimeout(function(){
-						$('.tishi').css({
-							'width':200+"px"
-						})
-					},5000);
+					alert("卡片不够了，后面的自行脑补吧，( ^_^ )");
+					return;
 				}
 				$(this).find('img').css({
 					'margin-left':5+"%",
