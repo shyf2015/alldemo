@@ -511,6 +511,13 @@
 				var index = $(this).index();
 				if(index==19){
 					alert("卡片不够了，后面的自行脑补吧，( ^_^ )");
+					for(var i=0;i<20;i++){
+					$('#ul li').eq(i).css({
+						'width':20+"%",
+						'height':25+"%",
+						
+					})
+				}
 					return;
 				}
 				$(this).find('img').css({
