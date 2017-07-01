@@ -261,9 +261,12 @@
 		<div class="bottom"></div>
 	</div>
 	<div class="kapian" id="kong">
-		<div class="top"><h4>空卡</h4><p class="close">×</p></div>
+		<div class="top"><h4>初印象</h4><p class="close">×</p></div>
 		<div class="kong">
-
+			<h5>记录时间：<span class="time"></span></h5>
+			
+			<textarea style="margin-top:-300px;font-size:25px;font-family: '楷体'" cols="10" rows="5">和某个明星长得挺像的（佟丽娅），就算是不打扮，也能看出来是漂亮的，很早就关注了，军训完选班委，好多人都交了申请，看到她也交了，坐在角落里等着听她的，结果没等到
+			</textarea>
 		</div>
 		<div class="bottom"></div>
 	</div>
@@ -273,7 +276,8 @@
 		提示:顺序点击每一格卡片
 	</div>
 	<audio id="music" loop="loop" src="audio/纯音乐 - 非常轻快温馨的曲子.mp3"></audio>
-	<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<!-- <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script> -->
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
 		$('#music')[0].play();
 		$('.xuyuan-text').on('click',function(){
@@ -536,7 +540,8 @@
 				})
 			})
 		}
-		
+
+		$(".time").html(new Date().getFullYear()+"/"+(new Date().getMonth()+1)+"/"+(new Date().getDate()-1));
 	</script>
 </body>
 </html>
